@@ -1,6 +1,11 @@
 # emacs temp files
 *~
 
+# latex build files
+*.aux
+*.log
+*.blg
+*.bbl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

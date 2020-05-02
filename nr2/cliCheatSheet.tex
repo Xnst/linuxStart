@@ -1,0 +1,582 @@
+\documentclass[a4paper]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{longtable,booktabs}
+\begin{document}
+
+
+\begin{longtable}{l|l}
+  \toprule
+  \textbf{kommando} & \textbf{beskrivning}\\
+  \midrule
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{man}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+    Visar dokumentationen f\"or det kommandot\\
+    ex: \texttt{man ls}
+  \end{minipage}
+  \\
+  
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{ls}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.7\textwidth} 
+    Listar filer i katalogen, ibland \"aven underkatalogerna\\
+    \begin{itemize}
+    \item
+      \texttt{ls} : alla synliga filer
+    \item
+      \texttt{ls -a} : alla filer, \"aven de ``osynliga''
+    \item
+      \texttt{ls -l} alla filer visade i l{\aa}ngt format
+    \item
+      \texttt{ls -lrth} : alla filer i l{\aa}ngt format{[}\texttt{l}{]} visade i omv\"and
+      ordning{[}\texttt{r}{]} baserat p{\aa} senast \"andrad{[}\texttt{t}{]} och filstorlekar visat
+      i k/M/G/T-byte{[}\texttt{h}{]}
+    \item
+      \texttt{ls *} : visar alla filer i katalogen, och om underkataloger finns visas
+      \"aven filerna i dessa
+    \end{itemize}
+  \end{minipage}
+  \\
+
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{cd}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+    Byter katalog
+    \begin{itemize}
+      
+    \item
+      \texttt{cd} : byter till hemkatalogen
+    \item
+      \texttt{cd ~/} : byter till hemkatalogen
+    \item
+      \texttt{cd /} : byter till rooten
+    \item
+      \texttt{cd ../../} : byter till tv{\aa} steg n\"armre rooten
+    \item
+      \texttt{cd -} : byter till senaste bes\"okta katalogen
+    \item
+      \texttt{cd werther} : byter till katalogen \emph{werther}
+    \end{itemize}
+  \end{minipage}
+  \\
+
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{cp}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+kopierar filer
+
+\begin{itemize}
+
+\item
+  \texttt{cp fil.txt ful.txt}
+\item
+  \texttt{cp -r dir1/ dirIgen}
+\end{itemize}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{rm}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+tar bort filen (ofta utan att fr{\aa}ga om det \"ar ok - en config sak)
+
+\begin{itemize}
+
+\item
+  \texttt{rm fil.txt}
+\item
+  \texttt{rm -r dir1/}
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{mkdir}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Skapar en katalog
+
+\begin{itemize}
+
+\item
+  \texttt{mkdir werther} : skapar katalogen \emph{werther} d\"ar du befinner dig
+\item
+  \texttt{mkdir -p werther/lidanden} : skapar katalogen \emph{lidanden} i
+  katalogen \emph{werther}, och om inte \emph{werther} finns s{\aa} den
+  ocks{\aa}
+\end{itemize}
+  \end{minipage}
+  \\
+% ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{sudo}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+k\"or ett kommando som superuser (root)
+
+\begin{itemize}
+
+\item
+  \texttt{sudo rm fil1.txt} : tar bort filen \"aven om du inte \"ar \"agera till den
+\item
+  \texttt{sudo rm -f fil1.txt} : ``dj\"avlar i helvete'' tar bort filen \"aven om du
+  inte \"ar \"agera till den
+\item
+  \texttt{sudo -s} : startar en session som root
+\end{itemize}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{history}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+listar alla tidigare kommandon
+
+t.ex:
+
+\begin{verbatim}
+history
+
+2044  emacs outline.md&
+2045  ls nr[0-9]
+2046  ls
+2047  ls *
+2048  history 
+\end{verbatim}
+
+vill k\"ora ls igen s{\aa}:
+
+\begin{verbatim}
+!2046
+\end{verbatim}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{find}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+hittar filer baserat p{\aa} s\"okinfo
+
+\begin{itemize}
+
+\item
+  find ./ -name ``\emph{.py" : listar alla pythonfiler(}.py) som finns i
+  alla underkataloger d\"ar du befinner dig (./)
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{grep}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+s\"oker i en fil efter en textstr\"ang och skriver ut den raden
+
+\begin{itemize}
+
+\item
+  \texttt{grep textstr cliCheatSheet.md}
+
+  \begin{itemize}
+  
+  \item
+    ger : - grep textstr cliCheatSheet.md
+  \end{itemize}
+\item
+  \texttt{grep -i} : s\"oker i filen utan att vara case sensitive
+\item
+  \texttt{grep -r} : s\"oker igenom filerna i underkatalogerna ocks{\aa}
+\item
+  \texttt{grep -A5 -i} : s\"oker i filen/erna utan att vara case sensitive och
+  skriver ut 5 rader fr{\aa}n d\"ar str\"angen finns
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{locate}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+s\"oker igenom registret \"over alla filer efter ett m\"onster
+
+\begin{verbatim}
+locate Cheat
+\end{verbatim}
+
+borde hitta denna fil om den finns p{\aa} datorn
+
+indexet uppdateras med j\"amna mellanrum, beh\"ovs det uppdateras s{\aa} skriv
+
+\begin{verbatim}
+sudo updatedb
+\end{verbatim}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{echo,\\ cat,\\ head,\\ tail,\\ less}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Skriver ut n{\aa}got
+
+\begin{itemize}
+
+\item
+  \texttt{echo ``Hej!''} : skriver i term \emph{Hej!}
+\item
+  \texttt{echo \$PATH} : skriver i term v\"ardet p{\aa} parametern PATH
+\item
+  \texttt{cat text.txt} : skriver i term inneh{\aa}llet i text.txt
+\item
+  \texttt{head text.txt} : skriver i term de f\"orst 10 raderna i text.txt
+\item
+  \texttt{tail text.txt} : skriver i term de sista 10 raderna i text.txt
+\item
+  \texttt{tail -100 text.txt} : skriver i term de sista 100 raderna i text.txt
+\item
+  \texttt{tail -f text.txt} : skriver i term de sista 10 raderna i text.txt och
+  v\"antar p{\aa} att nya rader skall komma f\"or att kunna visa dem.
+\item
+  \texttt{less text.txt} : \"oppnar text.txt s{\aa} att det g{\aa}r att scrolla. Avsluta
+  med q.
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{nano}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+En enkel texteditor som k\"ors i terminalf\"onstret
+
+\begin{verbatim}
+nano text.txt
+\end{verbatim}
+
+spara med C-o, avsluta med C-x
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{df}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+listar alla monterade filsystem. Alla pseudofilsystem ocks{\aa}
+
+\begin{itemize}
+
+\item
+  \texttt{df} : allt
+\item
+  \texttt{df -h} : allt presenterat i k/M/G/T-byte
+\item
+  \texttt{df -t ext4} : alla ext4 filsystem
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{du}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+visar storlek p{\aa} fil/katalog
+
+\begin{itemize}
+
+\item
+  \texttt{du -skh *}: vsar storleken p{\aa} alla underkataloger i k/M/G/T-byte
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{top}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+visar systemanv\"andning f\"or processerna. avsluta med \emph{q}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{alias}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Skapar ett \emph{nytt} kommando. V\"aldigt bra att ha i sin .bashrc
+
+\begin{verbatim}
+alias lrt='ls -lrth'
+\end{verbatim}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{\textbar{} (pipe)}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+att pipa \"ar V\"ALDIGT anv\"andbart. t.ex.
+
+\begin{verbatim}
+locate config|grep openbox | grep home
+\end{verbatim}
+
+tar fram alla filer med config i namnet och ger hela s\"okv\"agen, sorterar
+de som har openbox namnd i hela s\"okv\"agen och tar ut de som ocks{\aa} har
+home i s\"okv\"agen
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{xargs}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Anv\"ands ibland med pipe. Det som kommer ut ur kommandot innan (typ
+filnamn) kan beh\"ova processas.
+
+\begin{verbatim}
+find ~/ -name *.py | xargs grep "import pandas"
+\end{verbatim}
+
+i vilka python-filer i min hemkatalog har jag anv\"ant pandas?
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{export}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+F\"or att s\"atta in variabel
+
+\begin{verbatim}
+export PYTHON_LIBRARY=$HOME/python
+\end{verbatim}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{mount, umount}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+monterar/avmonterar ett filsystem
+
+\begin{itemize}
+
+\item
+  \texttt{sudo mount -o loop disk.iso mount-point-dir} : monterar iso-fil
+\item
+  \texttt{sudo umount mount-point-dir} : avmonterar
+\item
+  \texttt{sudo mount -t cifs //192.168.1.12/filer /mnt/serverFiler -o
+  user=niclas,credentials=\\/etc/samba/smb-pw/win,domain=HOME,file\_mode=0777,\\dir\_mode=0777,uid=1000,gid=1000,iocharset=utf8}
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{dmesg}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+skriver ut hela h\"andelsef\"orloppen som k\"arnan k\"anner. Bra vid fels\"okning.
+Pipa g\"arna in i less f\"or att kunna scrolla.
+
+\begin{itemize}
+
+\item
+  \texttt{dmesg \textbar{} less}
+\end{itemize}
+
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{ip}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Anv\"ander oftast bara f\"or att se ip-adress : \texttt{ip a}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{screen\\eller\\tmux}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth}
+    anv\"ands f\"or att starta cli-instanser som g{\aa}r att ha
+    k\"orandes utan att vara inloggad.
+
+    \texttt{screen -d -R} : starter eller kopplar upp emot instans igen
+
+\end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{tar}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+    Packar upp ett tar-arkiv.
+
+    \begin{itemize}
+    \item \texttt{tar tvf paket.tar.gz} :listar alla filer som finns i
+    \item \texttt{tar xvf paket.tar.gz} :packar upp alla filer som
+      finns i
+    \end{itemize}
+  \end{minipage}
+  \\
+  % ---    ----
+
+    \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{chmod och chown}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+    Ändrar rättigheter resp. ägare
+
+    \begin{itemize}
+    \item \texttt{chown a+x fil.py} : Ger alla (\texttt{a})
+      exekveringsrätt (\texttt{x})
+    \item \texttt{chown user: fil.txt} : gör \texttt{user} users
+      default grupp ägare till filen
+    \end{itemize}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{apt och dpkg}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+Program installeras n\"astan alltid i form av paket. P{\aa} debian-baserade
+distributioner anv\"ands .deb-filer. P{\aa} redhat-baserade anv\"ands
+.rpm-filer. Dessa paket inneh{\aa}ller programmen som skall instlleras och
+information om vilka andra paket som beh\"ovs. P{\aa} debian-baserade system
+anv\"ands apt och dpkg.
+
+\begin{itemize}
+
+\item
+  \texttt{dpkg} installerar ett paket.
+\item
+  \texttt{apt} anv\"ander dpkg och h{\aa}ller dessutom koll p{\aa} vilka andra
+  paket som skall installeras.
+\end{itemize}
+
+\textbf{om en deb-filh\"amtats:}
+
+\begin{itemize}
+
+\item
+  \texttt{sudo dpkg -i program-2.3.4.deb}
+\item
+  om det inte g{\aa}r bra s{\aa} beh\"ovs oftast fler paket installeras s{\aa} k\"or
+
+  \begin{itemize}
+  
+  \item
+    \texttt{sudo apt -f install}
+  \item
+    \texttt{sudo dpkg -i program-2.3.4.deb}
+  \end{itemize}
+\end{itemize}
+
+\textbf{om repositories anv\"ands}
+
+\begin{itemize}
+
+\item
+  \texttt{sudo apt install program}
+\end{itemize}
+
+\textbf{annat hanterande med apt}
+
+\begin{itemize}
+\item
+  \texttt{sudo apt update} : H\"amtar en lista p{\aa} vilka de senaste versionerna \"ar
+\item
+  \texttt{sudo apt upgrade} : installerar de senaste versionerna fr{\aa}n
+  repositories
+\item
+  \texttt{sudo apt full-upgrade} : installerar de senaste versionerna fr{\aa}n
+  repositories och tar med nyare saker som uppgraderar systemet\ldots{}
+\item
+  \texttt{apt search \emph{program}} : kollar om och vilka paket som finns
+\item
+  \texttt{sudo apt autoremove} : tar bort paket som inte beh\"ovs
+\end{itemize}
+  \end{minipage}\\
+  \bottomrule
+  
+\end{longtable}
+  
+
+
+\end{document}

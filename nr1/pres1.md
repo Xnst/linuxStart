@@ -22,6 +22,21 @@ https://www.virtualbox.org/wiki/Downloads
 https://ubuntu.com/download/desktop
 
 
+# alternativt göra usb 
+
+För att installera på datorn behövs en usb göras.
+
+För windows installera rufus:
+
+https://rufus.ie/
+
+Sedan starta datorn med usb-stickan i och tryck 
+
+F9 el. F12 el. ESC el. SHIFT el. DEL el. ... beroende på dator
+
+för att komma till boot-menyn.
+
+
 
 # Vad är GNU/Linux?
 

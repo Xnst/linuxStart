@@ -1,30 +1,39 @@
-% Preliminärt upplägg för 3-tillfälles linuxintro
+% PreliminÃ¤rt upplÃ¤gg fÃ¶r 3-tillfÃ¤lles linuxintro
 
-# tillfälle 1
+# tillfÃ¤lle 1
 
 - Introduktion
-	- Vad är Linux?
-	- Varför är det så populärt?
+	- Vad Ã¤r Linux?
+	- VarfÃ¶r Ã¤r det sÃ¥ populÃ¤rt?
 - Ladda ner distributionen
-- Köra över till USB / alt installera VirtualBox
-- Installera (gör det hemma också)
+- KÃ¶ra Ã¶ver till USB / alt installera VirtualBox
+- Installera (gÃ¶r det hemma ocksÃ¥)
+- lite om programvara.
 
 
-# tillfälle 2
+# tillfÃ¤lle 2
 
-- användare root + dig själv
-- filupplägget i Linux
+- anvÃ¤ndare root + dig sjÃ¤lv
+- struktur och filupplÃ¤gget i Linux
 - Hur hittar jag filerna?
 - Hur installerar jag program?
 - Programmen som finns
-	- FOSS(Free and Open Source Software) tankesätt
+	- FOSS(Free and Open Source Software) tankesÃ¤tt
+- grundlÃ¤ggande cli
+- lite om de olika fÃ¶nsterhanterarna som finns
+- lite om wine
 
 
-# tillfälle 3
+# tillfÃ¤lle 3
 
-- De olika skrivborden som finns att välja på
-- Terminalen, enkel användning
-	- några kommandon
+- De olika skrivborden som finns att vÃ¤lja pÃ¥
+- Terminalen, enkel anvÃ¤ndning
+	- nÃ¥gra kommandon
 	- config-filer
-- Hur hittar jag hjälp?
+- Hur hittar jag hjÃ¤lp?
+- FOSS communities
+- lshw etc.
+- git
+
+
 
