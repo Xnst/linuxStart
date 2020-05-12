@@ -54,7 +54,7 @@ den första biten visar :
 
 # struktur
 
-<cmd> [-ihfxert] [var] [fil]
+    <cmd> [-ihfxert] [var] [fil]
 
 - wildcards funkar
 	- ls w* / ls w[0-9] / ls w?
@@ -82,8 +82,9 @@ file.txt $\ne$ File.txt
 
 sätt ett \& efter kommandot. Bra när GUI-program startas
 
-    emacs&
+    emacs &
 
+\newpage
 
 # Osynliga filer och kataloger ofta config-saker
 
@@ -108,4 +109,13 @@ i .bashrc sätts gärna aliases och prompt
 	alias hi='history'
 	alias py='python3'
 
+
+## .config
+
+config filer, programrelaterade filer för användaren som mallar och
+auto-sparade tillstånd 
+
+- **autostart/** : startare för program som startas vid login
+- **libreoffice** : personliga mallar
+- etc.
 

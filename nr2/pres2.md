@@ -11,6 +11,7 @@
 - apt
 - hämta källkod och kompilera
 - snap
+- flatpack
 - appImage
 - docker
 
@@ -20,6 +21,7 @@
 FOSS(Free and Open Source Software) 
 
 - "betalar" genom att:
+	- donera pengar
 	- rapportera buggar
 	- prata om det
 	- använda det
@@ -38,18 +40,19 @@ det.
 	- https://alternativeto.net/platform/linux/
 
 
-# Desktop
+# Desktop och exempel på distro som använder
 
-- gnome
-- KDE
-- Xfce4
-- Cinnamon
-- Mate
-- Openbox
-- budgie
-- popOS
-- 
+- gnome (ubuntu eller gnome-ubuntu)
+- KDE (kubuntu)
+- Xfce4 (xubuntu)
+- Cinnamon (linux-mint)
+- Mate (ubuntu mate)
+- Openbox (Ubuntu Openbox)
+- budgie (solus, budgieubuntu)
+- pop!_OS (by system 76)
+- pantheon (elementary os)
 
+Typ alla funkar på ubuntu dock finns de såklart på andra bas OS också
 
 # Köra windowsprogram på linux
 

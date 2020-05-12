@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 %\usepackage[utf8]{inputenc}
-\usepackage[swedish]{babel}
+%\usepackage[swedish]{babel}
 \usepackage{longtable,booktabs}
 \begin{document}
 
@@ -58,7 +58,7 @@
     \item
       \texttt{cd} : byter till hemkatalogen
     \item
-      \texttt{cd ~/} : byter till hemkatalogen
+      \texttt{cd $\sim$/} : byter till hemkatalogen
     \item
       \texttt{cd /} : byter till rooten
     \item
@@ -86,6 +86,24 @@ kopierar filer
   \texttt{cp fil.txt ful.txt}
 \item
   \texttt{cp -r dir1/ dirIgen}
+\end{itemize}
+  \end{minipage}
+  \\
+  % ---    ----
+  \midrule
+  \begin{minipage}[t]{0.2\textwidth} 
+    \texttt{mv}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\textwidth} 
+flyttar eller byter namn pÃ¥ filer och kataloger
+
+\begin{itemize}
+
+\item
+  \texttt{mv fil.txt ful.txt}
+\item
+  \texttt{mv dir1/ dirIgen}
 \end{itemize}
   \end{minipage}
   \\
@@ -367,10 +385,10 @@ alias lrt='ls -lrth'
   \end{minipage}
   &
   \begin{minipage}[t]{0.8\textwidth} 
-att pipa \"ar V\"ALDIGT anv\"andbart. t.ex.
+att pipe:a \"ar V\"ALDIGT anv\"andbart. t.ex.
 
 \begin{verbatim}
-locate config|grep openbox | grep home
+locate config | grep openbox | grep home
 \end{verbatim}
 
 tar fram alla filer med config i namnet och ger hela s\"okv\"agen, sorterar
@@ -498,13 +516,13 @@ Anv\"ander oftast bara f\"or att se ip-adress : \texttt{ip a}
   \end{minipage}
   &
   \begin{minipage}[t]{0.8\textwidth} 
-    Ändrar rättigheter resp. ägare
+    Ã¤ndrar rÃ¤ttigheter resp. Ã¤gare
 
     \begin{itemize}
-    \item \texttt{chown a+x fil.py} : Ger alla (\texttt{a})
-      exekveringsrätt (\texttt{x})
-    \item \texttt{chown user: fil.txt} : gör \texttt{user} users
-      default grupp ägare till filen
+    \item \texttt{chmod a+x fil.py} : Ger alla (\texttt{a})
+      exekveringsrÃ¤tt (\texttt{x})
+    \item \texttt{chown user: fil.txt} : gÃ¶r \texttt{user} users
+      default grupp Ã¤gare till filen
     \end{itemize}
   \end{minipage}
   \\
